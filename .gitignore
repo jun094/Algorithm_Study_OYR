@@ -1,3 +1,6 @@
+# 교안 ignore
+/book_for_Mac
+
 # Logs
 logs
 *.log
