@@ -9,6 +9,6 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 ### 인프런 <1,2차원 배열 탐색>
 큰 수 출력하기, 보이는 학생, 가위바위보
 
-### 프로그래머스 <정렬>
+### 프로그래머스 [<정렬>](https://programmers.co.kr/learn/courses/30/parts/12198)
 가장 큰수, H-Index
 
