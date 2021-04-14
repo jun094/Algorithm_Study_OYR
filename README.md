@@ -16,3 +16,13 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 ### 프로그래머스 [<정렬>](https://programmers.co.kr/learn/courses/30/parts/12198)
 
 가장 큰수, H-Index
+
+## Day 2
+
+### 인프런 <1,2차원 배열 탐색>
+
+점수 계산, 등수구 하기, 격자판 최대합
+
+### 프로그래머스 [<정렬>](https://programmers.co.kr/learn/courses/30/parts/12230)
+
+소수 찾기, 카펫
