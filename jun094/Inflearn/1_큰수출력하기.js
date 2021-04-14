@@ -1,5 +1,5 @@
 const solution = (arr) => {
-    let ans;
+    let ans = [];
 
     ans = arr.filter((i, idx) => {
         if (idx === 0 || i > arr[idx - 1]) return i;

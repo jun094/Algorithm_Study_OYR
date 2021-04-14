@@ -1,10 +1,9 @@
 const solution = (arr) => {
-    let ans = 1;
+    let ans = 0;
     let len = arr.length;
-    let t = arr[0];
 
-    //2부터 시작이 핵심인듯!
-    for (let i = 2; i < len; i++) {
+    //1부터 시작이 핵심인듯!
+    for (let i = 1; i < len; i++) {
         if (arr[i] > arr[i - 1]) {
             ans++;
         }

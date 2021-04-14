@@ -1,7 +1,7 @@
 const solution = (a, b) => {
-    //1 < 2
-    //2 < 3
-    //3 < 1
+    //1(가위) < 2(바위)
+    //2(바위) < 3(보)
+    //3(보)  < 1(가위)
     let ans = [];
     let len = a.length;
 
@@ -27,4 +27,4 @@ const solution = (a, b) => {
 let a = [2, 3, 3, 1, 3, 1];
 let b = [1, 1, 2, 2, 3, 3];
 // a  b  a  b  d  a
-solution(a, b);
+solution(6, a, b);
