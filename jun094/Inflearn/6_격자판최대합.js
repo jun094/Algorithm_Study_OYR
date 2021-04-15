@@ -13,14 +13,20 @@ const solution = (arr) => {
     }
     max = tmp1 < tmp2 ? tmp2 : tmp1;
 
+    tmp1 = 0;
+    tmp2 = 0;
     //순차 접근
     for (let i = 0; i < len; i++) {
         for (let j = 0; j < len; j++) {
-            sum += arr[i][j];
+            tmp1 += arr[i][j];
+            tmp2 += arr[j][i];
         }
 
-        if (max < sum) {
-            max = sum;
+        if (max < tmp1) {
+            max = tmp1;
+        }
+        if (max < tmp2) {
+            max = tmp2;
         }
         sum = 0;
     }
