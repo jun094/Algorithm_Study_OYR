@@ -1,47 +1,27 @@
 console.log("main.js");
-// https://ryusm.tistory.com/102
+// https://velog.io/@rud285/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%B9%B4%ED%8E%AB-javascript
 
-function isPrime(num) {
-  if (num === 1) return false;
-  for (let i = 2; i * i <= num; i++) {
-    if (num % i === 0) return false;
-  }
-  return num;
-}
+function solution(brown, yellow) {
+  let answer = [];
 
-function subset(numbers, comb, all) {
-  console.log(numbers, comb);
-  if (numbers.length > 0) {
-    for (let i = 0; i < numbers.length; i++) {
-      console.log("i >> " + i);
-      const excluded = [...numbers];
-      excluded.splice(i, 1);
-      subset(excluded, comb + numbers[i], all);
+  for (let i = yellow; i >= 1; i--) {
+    if (yellow % i === 0) {
+      const yW = i; // 노란색 영역 가로길이
+      const yH = yellow / i; // 노란색 영역 세로길이
+
+      if (brown === 2 * yW + 2 * yH + 4) {
+        answer = [yW + 2, yH + 2];
+        break;
+      }
     }
   }
-
-  if (comb.length > 0) {
-    const num = parseInt(comb);
-    const primeNum = isPrime(num);
-    if (primeNum && !all.includes(primeNum)) all.push(primeNum);
-  }
-}
-
-function solution(input) {
-  let answer = 0;
-  const numbers = input.split("");
-  const arrLen = input.length;
-  let comb = "";
-  const allNumbers = [];
-
-  subset(numbers, comb, allNumbers);
-
-  answer = allNumbers.length;
-
   return answer;
 }
 
-const input1 = "123";
-const input2 = "011";
+const input1 = { brown: 10, yellow: 2 };
+const input2 = { brown: 8, yellow: 1 };
+const input3 = { brown: 24, yellow: 24 };
 
-console.log(solution(input1));
+const { brown, yellow } = input1;
+
+console.log(solution(brown, yellow));
