@@ -1,5 +1,6 @@
 console.log("main.js");
 
+// 현재 바꿀려는 인덱스
 let currentCursor = 0;
 
 // 상하 조작 횟수
@@ -73,7 +74,7 @@ function solution(name) {
   return answer;
 }
 
-const name1 = "JEROEN";
-const name2 = "JAN";
+const name1 = "BBAABAAA";
+const name2 = "ABAAAAABAB";
 
-console.log(solution(name1));
+console.log(solution(name2));
