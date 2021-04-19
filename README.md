@@ -36,3 +36,9 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 ### 프로그래머스 [<그리디>](https://programmers.co.kr/learn/courses/30/parts/12244)
 
 조이스틱
+
+## Day 4
+
+### 프로그래머스 [<그리디>](https://programmers.co.kr/learn/courses/30/parts/12244)
+
+큰수만들기, 
