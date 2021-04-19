@@ -42,3 +42,14 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 ### 프로그래머스 [<그리디>](https://programmers.co.kr/learn/courses/30/parts/12244)
 
 큰수만들기, 구명보트 
+
+
+## Day 5
+
+### 인프런 <문자열 탐색>
+
+숫자만 추출, 가장 짧은 문자거리, 문자열 압축
+
+### 프로그래머스 [<그리디>](https://programmers.co.kr/learn/courses/30/parts/12244)
+
+섬 연결하기
