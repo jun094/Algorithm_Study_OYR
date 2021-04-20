@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>등수 구하기</title>
+</head>
+<body>
+    <h1>Section2</h1>
+    <h2>5.등수 구하기</h2>
+    <p>
+        (1<=N<=100)명의 학생의 국어점수가 입력되면 각 학생의 등수를 입력된 순서대로 출력하는 
+        프로그램을 작성하세요.
+    </p>
+    <script>
+        function solution(arr){         
+                const N = arr.length;
+                let answer=Array.from({length:N}, ()=>1);
+                for(let i=0 ; i < N ; i++)
+                {
+                    for(let j=0; j < N ; j++)
+                    {
+                        if(arr[j] > arr[i])
+                        {
+                            answer[i] = answer[i] + 1;
+                        }
+                    }
+                }
+
+                return answer;
+            }
+
+            let arr=[7, 3, 9, 5, 6, 12, 12];
+            console.log(solution(arr));
+    </script>
+</body>
+</html>
