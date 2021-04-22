@@ -10,10 +10,10 @@ function solution(begin, target, words) {
   q.push(begin);
   visited[begin] = 0;
 
-  while (q.length > 0) {
-    let currentWord = q.shift();
+  while (q.length) {
+    const currentWord = q.shift();
     for (let i = 0; i < arrLen; i++) {
-      let nextWord = words[i];
+      const nextWord = words[i];
       const currents = currentWord.split("");
       const nexts = nextWord.split("");
       if (
