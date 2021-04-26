@@ -25,7 +25,7 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 ## WEEK4 그리디, 구현
 - 인프런 section7 1~9번
 - 동빈나 [그리디 유형 문제](https://github.com/ndb796/python-for-coding-test#11%EC%9E%A5-%EA%B7%B8%EB%A6%AC%EB%94%94)
-- 동빈나 [정렬 유형 문제](https://github.com/ndb796/python-for-coding-test#12%EC%9E%A5-%EA%B5%AC%ED%98%84)
+- 동빈나 [구현 유형 문제](https://github.com/ndb796/python-for-coding-test#12%EC%9E%A5-%EA%B5%AC%ED%98%84)
 
 
 ## WEEK5 BFS&DFS
