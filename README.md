@@ -41,8 +41,7 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 
 ### 프로그래머스 [<그리디>](https://programmers.co.kr/learn/courses/30/parts/12244)
 
-큰수만들기, 구명보트 
-
+큰수만들기, 구명보트
 
 ## Day 5
 
@@ -53,3 +52,15 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 ### 프로그래머스 [<그리디>](https://programmers.co.kr/learn/courses/30/parts/12244)
 
 섬 연결하기
+
+## Day 6
+
+### 프로그래머스 [<그리디>](https://programmers.co.kr/learn/courses/30/parts/12244)
+
+단속카메라
+
+## Day 7
+
+### 프로그래머스 [<BFS/DFS>](https://programmers.co.kr/learn/courses/30/parts/12421)
+
+타겟넘버, 네트워크
