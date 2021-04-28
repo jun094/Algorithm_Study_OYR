@@ -23,12 +23,6 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
     보이는학생 | [code](https://github.com/jun094/Algorithm_Study_OYR/blob/main/jun094/Inflearn/1-%EB%B0%B0%EC%97%B4%ED%83%90%EC%83%89/2%EB%B3%B4%EC%9D%B4%EB%8A%94%ED%95%99%EC%83%9D.js) | [code](https://github.com/jun094/Algorithm_Study_OYR/blob/main/sain/Inflearn/2-2/main.js) | [code](https://github.com/jun094/Algorithm_Study_OYR/blob/main/shindm/Inflearn/section2/2.html)
     
     
-    | 문제 | 최준영 | 최세인 | 신동민
-    | --- | ---: | ---: | ---:|
-  | `static` | 유형(기준) 없음 / 배치 불가능 | `static` |
-| `relative` | 요소 자신을 기준으로 배치 |  |
-| `absolute` | 위치 상 부모(조상)요소를 기준으로 배치 |  |
-| `fixed` | 브라우저 창을 기준으로 배치 |  |
 
 ## WEEK3 완전탐색(블루투포스), 효율성(투포인터 알고리즘, 슬라이딩윈도우, 해쉬)
 
