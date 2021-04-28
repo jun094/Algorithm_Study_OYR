@@ -17,7 +17,7 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
     문제 | 최준영 | 최세인 | 신동민
     ---- | ---- | ---- | ----
     큰수출력하기 | [code](https://github.com/jun094/Algorithm_Study_OYR/blob/main/jun094/Inflearn/1-%EB%B0%B0%EC%97%B4%ED%83%90%EC%83%89/1%ED%81%B0%EC%88%98%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0.js) | [code](https://github.com/jun094/Algorithm_Study_OYR/blob/main/sain/Inflearn/2-1/main.js)| [code](https://github.com/jun094/Algorithm_Study_OYR/blob/main/shindm/Inflearn/section2/1.html)
-    보이는학생 | [code](https://github.com/jun094/Algorithm_Study_OYR/blob/main/jun094/Inflearn/1-%EB%B0%B0%EC%97%B4%ED%83%90%EC%83%89/2%EB%B3%B4%EC%9D%B4%EB%8A%94%ED%95%99%EC%83%9D.js) | [code](https://github.com/jun094/Algorithm_Study_OYR/blob/main/sain/Inflearn/2-2/main.js) | [code]url(https://github.com/jun094/Algorithm_Study_OYR/blob/main/shindm/Inflearn/section2/2.html)
+    보이는학생 | [code](https://github.com/jun094/Algorithm_Study_OYR/blob/main/jun094/Inflearn/1-%EB%B0%B0%EC%97%B4%ED%83%90%EC%83%89/2%EB%B3%B4%EC%9D%B4%EB%8A%94%ED%95%99%EC%83%9D.js) | [code](https://github.com/jun094/Algorithm_Study_OYR/blob/main/sain/Inflearn/2-2/main.js) | [code](https://github.com/jun094/Algorithm_Study_OYR/blob/main/shindm/Inflearn/section2/2.html)
 
 ## WEEK3 완전탐색(블루투포스), 효율성(투포인터 알고리즘, 슬라이딩윈도우, 해쉬)
 
