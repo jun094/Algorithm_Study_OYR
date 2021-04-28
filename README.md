@@ -15,7 +15,7 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 -   <프로그래머스> [그리디](https://programmers.co.kr/learn/courses/30/parts/12244) : 조이스틱, 큰수만들기, 구명보트, 섬연결하기, 단속카메라
 -   <프로그래머스> [BFS/DFS](https://programmers.co.kr/learn/courses/30/parts/12421) : 타겟넘버, 네트워크, 단어변환, 여행경로
 
-<br></br>
+
 
     문제 | 최준영 | 최세인 | 신동민
     ---- | ---- | ---- | ----
