@@ -14,6 +14,9 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 -   <프로그래머스> [완전탐색](https://programmers.co.kr/learn/courses/30/parts/12230) : 소수찾기, 카펫
 -   <프로그래머스> [그리디](https://programmers.co.kr/learn/courses/30/parts/12244) : 조이스틱, 큰수만들기, 구명보트, 섬연결하기, 단속카메라
 -   <프로그래머스> [BFS/DFS](https://programmers.co.kr/learn/courses/30/parts/12421) : 타겟넘버, 네트워크, 단어변환, 여행경로
+
+<br/>
+
     문제 | 최준영 | 최세인 | 신동민
     ---- | ---- | ---- | ----
     큰수출력하기 | [code](https://github.com/jun094/Algorithm_Study_OYR/blob/main/jun094/Inflearn/1-%EB%B0%B0%EC%97%B4%ED%83%90%EC%83%89/1%ED%81%B0%EC%88%98%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0.js) | [code](https://github.com/jun094/Algorithm_Study_OYR/blob/main/sain/Inflearn/2-1/main.js)| [code](https://github.com/jun094/Algorithm_Study_OYR/blob/main/shindm/Inflearn/section2/1.html)
