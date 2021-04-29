@@ -11,10 +11,12 @@ function solution(N, M, input) {
     if (sum === 0) {
       sum += input[p1];
       p2++;
+      answer++;
     }
     const next = input[p2++];
     if (sum + next < M) {
       sum += next;
+      answer++;
     } else {
       if (sum + next === M) answer++;
       sum = 0;
@@ -25,8 +27,8 @@ function solution(N, M, input) {
   return answer;
 }
 
-const M = 6;
-const N = 8;
-const input = [1, 2, 1, 3, 1, 1, 1, 2];
+const M = 5;
+const N = 5;
+const input = [1, 3, 1, 2, 3];
 
 console.log(solution(N, M, input));
