@@ -32,8 +32,13 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 ## WEEK4 그리디, 구현
 
 -   인프런 section7 1~9번
--   동빈나 [그리디 유형 문제](https://github.com/ndb796/python-for-coding-test#11%EC%9E%A5-%EA%B7%B8%EB%A6%AC%EB%94%94)
--   동빈나 [구현 유형 문제](https://github.com/ndb796/python-for-coding-test#12%EC%9E%A5-%EA%B5%AC%ED%98%84)
+-   [동빈나 그리디 - 무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)
+-   [동빈나 구현 - 문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057)
+-   [동빈나 구현 - 자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)
+-   [동빈나 구현 - 기둥과 보 설치](https://programmers.co.kr/learn/courses/30/lessons/60061)
+-   [동빈나 구현 - 외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062)
+
+
 
 ## WEEK5 BFS&DFS
 
