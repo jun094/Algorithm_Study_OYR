@@ -29,7 +29,7 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 -   인프런 section 4, 완전탐색
 -   인프런 section 5, 효울성
 
-## WEEK4 그리디, 구현
+## WEEK4 [그리디, 구현](https://www.youtube.com/watch?v=2zjoKjt97vQ)
 
 -   인프런 section7 1~9번
 -   [동빈나 그리디 - 무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)
