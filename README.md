@@ -29,15 +29,12 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 -   인프런 section 4, 완전탐색
 -   인프런 section 5, 효울성
 
-## WEEK4 [그리디, 구현](https://www.youtube.com/watch?v=2zjoKjt97vQ)
+## WEEK4 [그리디](https://www.youtube.com/watch?v=2zjoKjt97vQ), [정렬](https://www.youtube.com/watch?v=KGyK-pNvWos&list=PLRx0vPvlEmdAghTr5mXQxGpHjWqSz0dgC&index=4&t=576s)
 
 -   인프런 section7 1~9번
 -   [동빈나 그리디 - 무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)
--   [동빈나 구현 - 문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057)
--   [동빈나 구현 - 자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)
--   [동빈나 구현 - 기둥과 보 설치](https://programmers.co.kr/learn/courses/30/lessons/60061)
--   [동빈나 구현 - 외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062)
-
+-   [동빈나 정렬 - 실패율](https://programmers.co.kr/learn/courses/30/lessons/42889)
+-   [동빈나 정렬 - 모음집](https://github.com/ndb796/python-for-coding-test#14%EC%9E%A5-%EC%A0%95%EB%A0%AC)
 
 
 ## WEEK5 BFS&DFS
@@ -48,11 +45,14 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 
 -   미정
 
-## WEEK7 이진탐색, 정렬
+## WEEK7 이진탐색, [구현](https://www.youtube.com/watch?v=2zjoKjt97vQ)
 
--   인프런 section7 10~12번
--   동빈나 [정렬](https://github.com/ndb796/python-for-coding-test#14%EC%9E%A5-%EC%A0%95%EB%A0%AC)
--   동빈나 [이진탐색](https://github.com/ndb796/python-for-coding-test#15%EC%9E%A5-%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89)
+-   인프런 이진탐색 section7 10~12번
+-   [동빈나 이진탐색](https://github.com/ndb796/python-for-coding-test#15%EC%9E%A5-%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89)
+-   [동빈나 구현 - 문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057)
+-   [동빈나 구현 - 자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)
+-   [동빈나 구현 - 기둥과 보 설치](https://programmers.co.kr/learn/courses/30/lessons/60061)
+-   [동빈나 구현 - 외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062)
 
 ## WEEK8 동적계획법(DP)
 
