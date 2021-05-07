@@ -30,7 +30,8 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 -   인프런 section7 1~9번
 -   [동빈나 그리디 - 무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)
 -   [동빈나 정렬 - 실패율](https://programmers.co.kr/learn/courses/30/lessons/42889)
--   [동빈나 정렬 - 모음집](https://github.com/ndb796/python-for-coding-test#14%EC%9E%A5-%EC%A0%95%EB%A0%AC)
+-   [동빈나 그리디 문제 모음](https://github.com/ndb796/python-for-coding-test#11%EC%9E%A5-%EA%B7%B8%EB%A6%AC%EB%94%94)
+-   [동빈나 정렬 문제 모음](https://github.com/ndb796/python-for-coding-test#14%EC%9E%A5-%EC%A0%95%EB%A0%AC)
 
 ## WEEK5 BFS&DFS
 
