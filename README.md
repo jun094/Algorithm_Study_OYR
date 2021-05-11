@@ -33,13 +33,18 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 -   [동빈나 그리디 문제 모음](https://github.com/ndb796/python-for-coding-test#11%EC%9E%A5-%EA%B7%B8%EB%A6%AC%EB%94%94)
 -   [동빈나 정렬 문제 모음](https://github.com/ndb796/python-for-coding-test#14%EC%9E%A5-%EC%A0%95%EB%A0%AC)
 
-## WEEK5 BFS&DFS
+## WEEK5 [BFS&DFS](https://www.youtube.com/watch?v=7C9RgOcvkvo)
 
--   미정
+-   인프런 section 8 1~12번
+-   [동빈나 BFS&DFS - 괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058)
+-   [동빈나 BFS&DFS - 블록 이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063)
+-   [동빈나 BFS/DFS 문제 모음](https://github.com/ndb796/python-for-coding-test#13%EC%9E%A5-dfsbfs)
 
-## WEEK6 BFS&DFS
+## WEEK6 [BFS&DFS](https://www.youtube.com/watch?v=7C9RgOcvkvo)
 
--   미정
+-   인프런 section8 13~15번
+-   인프런 section9 전체 (8문제)
+-   [프로그래머스 BFS/DFS toolkit](https://programmers.co.kr/learn/courses/30/parts/12421)
 
 ## WEEK7 이진탐색, [구현](https://www.youtube.com/watch?v=2zjoKjt97vQ)
 
