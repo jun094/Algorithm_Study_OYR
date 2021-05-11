@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>선택정렬</title>
+</head>
+<body>
+    <h1>Section7</h1>
+    <h2>1. 선택정렬</h2>
+    <p>N개이 숫자가 입력되면 오름차순으로 정렬하여 출력하는 프로그램을 작성하세요.
+        정렬하는 방법은 선택정렬입니다.                   
+    </p>
+    <script>
+            function solution(arr){
+                let answer = [];
+                let N = arr.length;
+                let tmp;
+                for(let i = 0 ; i < N ; i++)
+                {
+                    let index = i;
+                    for(let j = i + 1 ; j < N ; j++)
+                    {
+                        if(arr[j] < arr[index])
+                        {
+                            index = j;
+                        }
+                    }
+                    tmp = arr[index];
+                    arr[index] = arr[i];
+                    arr[i] = tmp;
+                }
+                return arr;
+            }
+
+            let arr=[13, 5, 11, 7, 23, 15];
+            console.log(solution(arr));
+    </script>
+</body>
+</html>
