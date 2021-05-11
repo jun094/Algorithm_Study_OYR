@@ -10,6 +10,7 @@ const initGraph = (arr, begin, n, len) => {
         for (let j = 0; j < len; j++) {
             if (i !== j) {
                 let cnt = 0;
+
                 for (k = 0; k < n; k++) {
                     if (arr[i][k] !== arr[j][k]) cnt++;
                 }

@@ -1,6 +1,9 @@
 # 교안 ignore
 /book_for_Mac
 
+#라인 코딩 테스트
+/jun094/Line
+
 # Logs
 logs
 *.log
