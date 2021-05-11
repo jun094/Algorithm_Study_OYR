@@ -39,8 +39,6 @@ public class failureLate {
 
         int i = 0;
         for (Map.Entry<Integer, Double> entry : result.entrySet()) {
-            // System.out.println("Key: " + entry.getKey() + ", "+ "Value: " +
-            // entry.getValue());
             answer[i] = entry.getKey();
             i++;
         }
