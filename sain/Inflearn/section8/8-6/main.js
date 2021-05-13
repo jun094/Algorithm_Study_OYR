@@ -5,6 +5,7 @@ function solution(C, weights) {
   const wLen = weights.length;
 
   function findMax(idx, sum) {
+    if (sum > C) return;
     if (idx === wLen) {
       if (answer < sum && sum <= C) answer = sum;
       return;
