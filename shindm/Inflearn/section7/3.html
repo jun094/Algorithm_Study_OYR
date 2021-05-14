@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Special Sort(구글 인터뷰)</title>
+</head>
+<body>
+    <h1>Section7</h1>
+    <h2>3. Special Sort(구글 인터뷰)</h2>
+    <p>N개의 정수가 입력되면 당신은 입력된 값을 정렬해야 한다. 
+        음의 정수는 앞쪽에 양의정수는 뒷쪽에 있어야 한다. 또한 양의정수와 음의정수의 순서에는 
+        변함이 없어야 한다
+                        
+    </p>
+    <script>
+            function solution(arr){
+                let answer = [];
+                let N = arr.length;
+                let tmp;
+                for(let i = 0 ; i < N - 1 ; i++)
+                {
+                    for(let j = 0 ; j < N - i ; j++)
+                    {
+                        if(arr[j] > 0 && arr[j+1] < 0)
+                        {
+                            tmp = arr[j+1];
+                            arr[j+1] = arr[j];
+                            arr[j] = tmp;
+                        }
+                    }
+                }
+                return arr;
+            }
+
+            let arr=[1, 2, 3, -3, -2, 5, 6, -6];
+            console.log(solution(arr));
+    </script>
+</body>
+</html>
