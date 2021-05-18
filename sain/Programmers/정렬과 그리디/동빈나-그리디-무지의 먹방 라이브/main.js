@@ -1,38 +1,43 @@
 console.log("main.js");
 
-function PriorityQueue(elems, idx) {
-  return elems.sort((a, b) => a[idx] - b[idx]);
-}
+// function PriorityQueue(elems, idx) {
+//   return elems.sort((a, b) => a[idx] - b[idx]);
+// }
 
 function solution(food_times, k) {
   let answer = 0;
   let allFoodTimes = 0;
-  let sum = 0;
-  let prev = 0;
+  let idx = 0;
   let timesLength = food_times.length;
-  for (let i = 0; i < timesLength; i++) allFoodTimes += food_times[i];
+  const priorityQueue = [];
+  for (let i = 0; i < timesLength; i++) {
+    priorityQueue.push([food_times[i], i + 1]);
+    allFoodTimes += food_times[i];
+  }
 
   if (allFoodTimes <= k) return -1;
 
-  const priorityQueue = PriorityQueue(
-    food_times.map((d, idx) => ({ foodTime: d, number: idx + 1 })),
-    "foodTime"
-  );
+  priorityQueue.sort((a, b) => a[0] - b[0]);
 
-  while (sum + (priorityQueue[0].foodTime - prev) * timesLength <= k) {
-    const currentFoodTime = priorityQueue.shift().foodTime;
-    sum += (currentFoodTime - prev) * timesLength;
-    timesLength -= 1;
-    prev = currentFoodTime;
+  while (timesLength) {
+    const diff =
+      idx === 0
+        ? priorityQueue[0][0]
+        : priorityQueue[idx][0] - priorityQueue[idx - 1][0];
+
+    console.log(diff);
+
+    if (k > diff * timesLength) {
+      k -= diff * timesLength;
+    } else {
+      const tmp = priorityQueue.slice(idx);
+      tmp.sort((a, b) => a[1] - b[1]);
+      answer = tmp[k % tmp.length][1];
+      break;
+    }
+    idx++;
+    timesLength--;
   }
-
-  let target = k - sum + 1;
-  const restLength = priorityQueue.length;
-  let tmp = Math.floor((target - 1) / restLength);
-  const result = priorityQueue.sort((a, b) => a.number - b.number);
-  target -= tmp * restLength;
-
-  answer = result[target - 1].number;
 
   return answer;
 }
@@ -52,7 +57,12 @@ const input2 = {
   k: 27,
 };
 
-const { food_times, k } = input;
+const input3 = {
+  food_times: [8, 6, 4],
+  k: 15,
+};
+
+const { food_times, k } = input3;
 
 console.log(solution(food_times, k));
 

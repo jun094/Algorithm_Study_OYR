@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>이진트리 순회(깊이 우선 판매)</title>
+</head>
+<body>
+    <h1>Section8</h1>
+    <h2>3. 이진트리 순회(깊이 우선 탐색)</h2>
+    <p>
+        이진트리를 전위순회와 후위순회를 연습해보세요.
+    </p>
+    <script>
+             function solution(n)
+             {
+                let answer="";
+                function DFS(v)
+                {
+                    if(v>7)//베이스 케이스
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        //전위순회 출력
+                        answer+=(v+' ');
+                        DFS(v*2);
+                        DFS(v*2+1);
+
+                        /*
+                        //중위순회 출력
+                        DFS(v*2);
+                        answer+=(v+' ');
+                        DFS(v*2+1);
+                        */
+
+                       /*
+                       //후위순회 출력
+                       DFS(v*2);
+                       DFS(v*2+1);
+                       answer+=(v+' ');
+                       */
+                    }
+                }
+                DFS(n);
+                return answer;
+            }
+
+            solution(3);
+    </script>
+</body>
+</html>
