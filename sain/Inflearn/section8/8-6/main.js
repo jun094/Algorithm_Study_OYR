@@ -7,7 +7,7 @@ function solution(C, weights) {
   function findMax(idx, sum) {
     if (sum > C) return;
     if (idx === wLen) {
-      if (answer < sum && sum <= C) answer = sum;
+      if (answer < sum) answer = sum;
       return;
     }
     findMax(idx + 1, sum + weights[idx]);
