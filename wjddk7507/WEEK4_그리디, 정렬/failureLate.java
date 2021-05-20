@@ -3,7 +3,7 @@
 
 import java.util.*;
 
-public class failureLate {
+public class FailureLate {
     public static void main(String[] args) {
         int N = 5;
         int[] stages = { 2, 1, 2, 6, 2, 4, 3, 3 };
