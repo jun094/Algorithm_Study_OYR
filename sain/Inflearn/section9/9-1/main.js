@@ -4,7 +4,13 @@ function solution(v, edges) {
   let answer = 0;
   const edgesCount = edges.length;
   const visited = new Array(v).fill(false);
+  const graph = Array.from(Array(v), () => new Array(v).fill(false));
   const q = [];
+
+  for (let i = 0; i < edgesCount; i++) {
+    const [a, b] = edges[i];
+    graph[a - 1][b - 1] = true;
+  }
 
   function dfs(l) {
     visited[l - 1] = true;
@@ -15,11 +21,10 @@ function solution(v, edges) {
       return;
     }
 
-    for (let i = 0; i < edgesCount; i++) {
-      const [from, to] = edges[i];
-      if (!visited[to - 1] && l === from) {
-        dfs(to);
-        visited[to - 1] = false;
+    for (let i = 0; i < v; i++) {
+      if (!visited[i] && graph[l - 1][i]) {
+        dfs(i + 1);
+        visited[i] = false;
         q.pop();
       }
     }
