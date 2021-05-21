@@ -3,7 +3,6 @@ console.log("main.js");
 function solution(num) {
   let answer = "";
   const q = [1];
-  const visited = Array(num).fill(false);
 
   function bfs(num) {
     while (q.length) {
