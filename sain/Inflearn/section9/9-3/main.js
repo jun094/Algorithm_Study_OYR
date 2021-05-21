@@ -34,7 +34,6 @@ function solution(board) {
       solvePuzzle(a, b + 1);
       visited[a][b + 1] = false;
     }
-    visited[a][b] = false;
   }
 
   solvePuzzle(0, 0);
