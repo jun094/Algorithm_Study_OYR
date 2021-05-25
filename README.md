@@ -54,7 +54,6 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 -   [동빈나 구현 - 자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)
 -   [동빈나 구현 - 기둥과 보 설치](https://programmers.co.kr/learn/courses/30/lessons/60061)
 -   [동빈나 구현 - 외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062)
-
 -   [동빈나 이진탐색 문제 모음](https://github.com/ndb796/python-for-coding-test#15%EC%9E%A5-%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89)
 -   [동빈나 구현 문제 모음](https://github.com/ndb796/python-for-coding-test#12%EC%9E%A5-%EA%B5%AC%ED%98%84)
 
