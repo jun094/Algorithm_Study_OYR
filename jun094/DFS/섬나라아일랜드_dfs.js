@@ -16,6 +16,11 @@ const solution = (arr) => {
             dfs(x, y + 1);
             dfs(x - 1, y);
             dfs(x + 1, y);
+            //대각선 위치들 dfs 수행
+            dfs(x - 1, y - 1);
+            dfs(x - 1, y + 1);
+            dfs(x + 1, y - 1);
+            dfs(x + 1, y + 1);
 
             return true;
         }
@@ -42,6 +47,7 @@ const arr = [
     [0, 0, 0, 1, 0, 1, 1],
     [1, 1, 0, 1, 1, 0, 0],
     [1, 0, 0, 0, 1, 0, 0],
+    [1, 0, 1, 0, 1, 0, 0],
 ];
 
 solution(arr);
