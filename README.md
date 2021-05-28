@@ -46,14 +46,18 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 -   인프런 section9 전체 (8문제)
 -   [프로그래머스 BFS/DFS toolkit](https://programmers.co.kr/learn/courses/30/parts/12421)
 
-## WEEK7 이진탐색, [구현](https://www.youtube.com/watch?v=2zjoKjt97vQ)
+## WEEK7 [이진탐색](https://www.youtube.com/watch?v=94RC-DsGMLo&ab_channel=%EB%8F%99%EB%B9%88%EB%82%98%EB%8F%99%EB%B9%88%EB%82%98), [구현](https://youtu.be/2zjoKjt97vQ?t=1699)
 
 -   인프런 이진탐색 section7 10~12번
--   [동빈나 이진탐색](https://github.com/ndb796/python-for-coding-test#15%EC%9E%A5-%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89)
+-   [동빈나 이진탐색 - 가사 검색](https://programmers.co.kr/learn/courses/30/lessons/60060)
 -   [동빈나 구현 - 문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057)
 -   [동빈나 구현 - 자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)
 -   [동빈나 구현 - 기둥과 보 설치](https://programmers.co.kr/learn/courses/30/lessons/60061)
 -   [동빈나 구현 - 외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062)
+-   [동빈나 이진탐색 문제 모음](https://github.com/ndb796/python-for-coding-test#15%EC%9E%A5-%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89)
+-   [동빈나 구현 문제 모음](https://github.com/ndb796/python-for-coding-test#12%EC%9E%A5-%EA%B5%AC%ED%98%84)
+
+
 
 ## WEEK8 동적계획법(DP)
 
