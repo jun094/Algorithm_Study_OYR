@@ -81,9 +81,9 @@ function solution(key, lock) {
           answer = true;
           break;
         }
-        for (let i = 0; i < 4; i++) {
+        for (let k = 0; k < 4; k++) {
           const cpcpKey = cpKey.map((inner) => inner.slice());
-          move(cpcpKey, i);
+          move(cpcpKey, k);
           if (check(cpcpKey, lock)) {
             answer = true;
             break;
