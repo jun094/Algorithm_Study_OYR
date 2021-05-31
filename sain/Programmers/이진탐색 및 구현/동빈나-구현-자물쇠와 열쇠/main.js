@@ -2,6 +2,97 @@ console.log("main.js");
 
 function solution(key, lock) {
   let answer = false;
+  const lockSize = lock[0].length;
+
+  function rotate(arr) {
+    const temp = Array.from(Array(lockSize), () => new Array(lockSize).fill(0));
+    for (let i = 0; i < lockSize; i++) {
+      for (let j = 0; j < lockSize; j++) {
+        temp[i][j] = arr[lockSize - 1 - j][i];
+      }
+    }
+    for (let i = 0; i < lockSize; i++) {
+      for (let j = 0; j < lockSize; j++) {
+        arr[i][j] = temp[i][j];
+      }
+    }
+  }
+
+  function check(comp, lock) {
+    let startI = lockSize - 1;
+    for (let i = 0; i < lockSize; i++) {
+      let startJ = lockSize - 1;
+      for (let j = 0; j < lockSize; j++) {
+        if (comp[startI][startJ] === lock[i][j]) return false;
+        startJ++;
+      }
+      startI++;
+    }
+    return true;
+  }
+
+  // 키 대입
+  // 회전
+  for (let r = 0; r < 4; r++) {
+    // 이동
+    for (let i = 0; i < lockSize * 3 - (lockSize + 1); i++) {
+      for (let j = 0; j < lockSize * 3 - (lockSize + 1); j++) {
+        // 대입
+        const area = Array.from(Array(lockSize * 3 - 2), () =>
+          new Array(lockSize * 3 - 2).fill(0)
+        );
+        for (let a = 0; a < lockSize; a++) {
+          for (let b = 0; b < lockSize; b++) {
+            area[i + a][j + b] = key[a][b];
+          }
+        }
+        if (check(area, lock)) {
+          answer = true;
+          break;
+        }
+      }
+      if (answer) break;
+    }
+    if (answer) break;
+    rotate(key);
+  }
+  return answer;
+}
+
+const input = {
+  key: [
+    [0, 0, 0],
+    [1, 0, 0],
+    [0, 1, 1],
+  ],
+  lock: [
+    [1, 1, 1],
+    [1, 1, 0],
+    [1, 0, 1],
+  ],
+};
+
+const input2 = {
+  key: [
+    [0, 0, 0, 0],
+    [0, 1, 0, 0],
+    [0, 0, 1, 1],
+    [0, 0, 0, 0],
+  ],
+  lock: [
+    [1, 1, 1, 1],
+    [1, 1, 0, 1],
+    [1, 0, 1, 1],
+    [1, 1, 1, 1],
+  ],
+};
+
+const { key, lock } = input2;
+
+console.log(solution(key, lock));
+
+function solution2(key, lock) {
+  let answer = false;
   const size = key[0].length;
 
   function rotate(arr) {
@@ -97,20 +188,3 @@ function solution(key, lock) {
 
   return answer;
 }
-
-const input = {
-  key: [
-    [0, 0, 0],
-    [1, 0, 0],
-    [0, 1, 1],
-  ],
-  lock: [
-    [1, 1, 1],
-    [1, 1, 0],
-    [1, 0, 1],
-  ],
-};
-
-const { key, lock } = input;
-
-console.log(solution(key, lock));
