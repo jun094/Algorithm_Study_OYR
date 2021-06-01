@@ -2,12 +2,11 @@ console.log("main.js");
 
 function solution(words, queries) {
   let answer = [];
-  const wordsCount = words.length;
   const rwords = words.slice().map((s) => s.split("").reverse().join(""));
 
   function comp(a, b) {
-    aLen = a.length;
-    bLen = b.length;
+    let aLen = a.length;
+    let bLen = b.length;
     if (aLen < bLen) {
       return true;
     } else if (aLen === bLen) {
@@ -16,32 +15,28 @@ function solution(words, queries) {
     }
   }
 
-  function upper_bound(left, right, finds, arr, compareFn) {
-    let result = 0;
-    while (left <= right) {
+  function upper_bound(left, right, finds, arr) {
+    while (left < right) {
       const mid = Math.floor((left + right) / 2);
-      if (!compareFn(arr[mid], finds)) {
-        left = mid + 1;
+      if (arr[mid] > finds) {
+        right = mid;
       } else {
-        right = mid - 1;
+        left = mid + 1;
       }
     }
-    return result;
+    return right;
   }
 
-  function lower_bound(left, right, finds, arr, compareFn) {
-    let result = 0;
-    while (left <= right) {
+  function lower_bound(left, right, finds, arr) {
+    while (left < right) {
       const mid = Math.floor((left + right) / 2);
-      if (!compareFn(finds, arr[mid])) {
-        left = mid + 1;
-        result = right;
+      if (arr[mid] >= finds) {
+        right = mid;
       } else {
-        right = mid - 1;
-        result = left;
+        left = mid + 1;
       }
     }
-    return result;
+    return right;
   }
 
   words.sort((a, b) => (comp(a, b) ? -1 : 0));
@@ -52,19 +47,23 @@ function solution(words, queries) {
     if (q[0] === "?") {
       q = q.split("").reverse().join("");
 
-      let lqs = "";
-      let hqs = "";
+      let lqs = q.replace(/\?/g, "a");
+      let hqs = q.replace(/\?/g, "z");
 
-      for (let i = 0; i < qLen; i++) {
-        lqs += q[i] === "?" ? "a" : q[i];
-        hqs += q[i] === "?" ? "z" : q[i];
-      }
+      const rws = rwords.filter((s) => s.length === lqs.length);
 
-      console.log(lqs);
-      const lo = lower_bound(0, wordsCount, lqs, rwords, comp);
-      // console.log(hqs);
-      // const hi = upper_bound(0, wordsCount, lqs, rwords, comp);
+      const lo = lower_bound(0, rws.length, lqs, rws);
+      const hi = upper_bound(0, rws.length, hqs, rws);
+      answer.push(hi - lo);
     } else {
+      let lqs = q.replace(/\?/g, "a");
+      let hqs = q.replace(/\?/g, "z");
+
+      const ws = words.filter((s) => s.length === lqs.length);
+
+      const lo = lower_bound(0, ws.length, lqs, ws);
+      const hi = upper_bound(0, ws.length, hqs, ws);
+      answer.push(hi - lo);
     }
   }
 
