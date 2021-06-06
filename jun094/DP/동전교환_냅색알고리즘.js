@@ -1,28 +1,22 @@
+// 동전의 종류가 많거나(100개 이상), 거슬러 줄 금액이 크다면 (100,000)
+// dfs 가지고는 안됨 !! -> 재귀로 풀 수가 없음
+// dp로 해주어야함
+
 const solution = (arr, m) => {
-    let answer = 0;
     const n = arr.length;
-    let total = m;
-    let dp = [];
+    let dp = Array(m + 1).fill(9999);
 
-    arr.sort((a, b) => b - a);
-
+    dp[0] = 0;
     for (let i = 0; i < n; i++) {
-        let cnt = 0;
+        for (let j = arr[i]; j <= m; j++) {
+            let tmp = dp[j - arr[i]] + 1;
 
-        while (cnt * arr[i] <= total) {
-            cnt++;
+            dp[j] = Math.min(tmp, dp[j]);
         }
-        cnt--;
-
-        dp[i] = cnt;
-        total -= cnt * arr[i];
+        //console.log(dp);
     }
 
-    for (let i = 0; i < n; i++) {
-        answer += dp[i];
-    }
-
-    return answer;
+    return dp[m];
 };
 
-solution([1, 2, 5], 18);
+solution([1, 2, 5], 15);
