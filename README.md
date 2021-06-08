@@ -59,6 +59,10 @@ Sejoing Univ. 웹개발 동아리 Open Year Round 알고리즘 스터디
 
 
 
-## WEEK8 동적계획법(DP)
+## WEEK8 [동적계획법(DP)](https://www.youtube.com/watch?v=5Lu34WIx2Us)
+-   인프런 DP section10 (5문제)
+-   [프로그래머스 DP kit](https://programmers.co.kr/learn/courses/30/parts/12263)
+-   [동빈나 DP 문제 모음](https://github.com/ndb796/python-for-coding-test#16%EC%9E%A5-%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)
 
--   인프런 section10
+
+
