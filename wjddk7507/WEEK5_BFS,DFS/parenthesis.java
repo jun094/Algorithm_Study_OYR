@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class parenthesis {
+public class Parenthesis {
     public static void main(String[] args) {
         String p = "()))((()";
         String answer = "";

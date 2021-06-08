@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>이진트리 넓이우선탐색(BFS)</title>
+</head>
+<body>
+    <h1>Section9</h1>
+    <h2>4.이진트리 넓이우선탐색(BFS)</h2>
+    <p>
+        아래 그림과 같은 이진트리를 넓이우선탐색해 보세요. 
+<img src="img/9-4.jpg">
+
+    </p>
+    <p>
+        넓이 우선 탐색 : 1 2 3 4 5 6 7
+    </p>
+    <script>
+        function solution(){  
+                let answer="";
+                let queue=[];
+                queue.push(1);
+                while(queue.length)
+                {
+                    console.log(queue);
+                    let v=queue.shift();
+                    answer= answer + v +" ";
+                    for(let nv of [v*2, v*2+1]) // 배열가지고 하기
+                    {
+                        if(nv > 7)
+                        {
+                            continue;
+                        }
+                        queue.push(nv);
+                    }
+                }
+                return answer;
+            }
+
+            console.log(solution());
+    </script>
+</body>
+</html>
