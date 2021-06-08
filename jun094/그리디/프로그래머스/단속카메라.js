@@ -24,3 +24,25 @@ let routes = [
     [-5, -3],
 ];
 solution(routes);
+
+let arr = [
+    ['b', 3],
+    ['a', 1],
+    ['b', 2],
+    ['c', 1],
+];
+
+arr.sort((a, b) => {
+    if (a[0] !== b[0]) return a[0] > b[0] ? 1 : -1;
+    else return b[0] - a[0];
+});
+
+arr.sort((a, b) => {
+    return 1;
+});
+let arr = [
+    ['a', 1],
+    ['b', 3],
+    ['b', 2],
+    ['c', 1],
+];
