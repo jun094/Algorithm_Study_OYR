@@ -3,16 +3,17 @@ console.log("main.js");
 function solution(key, lock) {
   let answer = false;
   const lockSize = lock[0].length;
+  const keySize = key[0].length;
 
   function rotate(arr) {
-    const temp = Array.from(Array(lockSize), () => new Array(lockSize).fill(0));
-    for (let i = 0; i < lockSize; i++) {
-      for (let j = 0; j < lockSize; j++) {
-        temp[i][j] = arr[lockSize - 1 - j][i];
+    const temp = Array.from(Array(keySize), () => new Array(keySize).fill(0));
+    for (let i = 0; i < keySize; i++) {
+      for (let j = 0; j < keySize; j++) {
+        temp[i][j] = arr[keySize - 1 - j][i];
       }
     }
-    for (let i = 0; i < lockSize; i++) {
-      for (let j = 0; j < lockSize; j++) {
+    for (let i = 0; i < keySize; i++) {
+      for (let j = 0; j < keySize; j++) {
         arr[i][j] = temp[i][j];
       }
     }
@@ -35,14 +36,14 @@ function solution(key, lock) {
   // 회전
   for (let r = 0; r < 4; r++) {
     // 이동
-    for (let i = 0; i < lockSize * 3 - (lockSize + 1); i++) {
-      for (let j = 0; j < lockSize * 3 - (lockSize + 1); j++) {
+    for (let i = 0; i < lockSize + keySize - 1; i++) {
+      for (let j = 0; j < lockSize + keySize - 1; j++) {
         // 대입
-        const area = Array.from(Array(lockSize * 3 - 2), () =>
-          new Array(lockSize * 3 - 2).fill(0)
+        const area = Array.from(Array(lockSize + 2 * keySize - 2), () =>
+          new Array(lockSize + 2 * keySize - 2).fill(0)
         );
-        for (let a = 0; a < lockSize; a++) {
-          for (let b = 0; b < lockSize; b++) {
+        for (let a = 0; a < keySize; a++) {
+          for (let b = 0; b < keySize; b++) {
             area[i + a][j + b] = key[a][b];
           }
         }
