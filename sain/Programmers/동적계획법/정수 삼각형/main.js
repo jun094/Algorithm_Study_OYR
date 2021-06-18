@@ -1,5 +1,5 @@
 console.log("main.js");
-
+//
 function solution(input) {
   const n = input.length;
   for (let i = 1; i < n; i++) {
