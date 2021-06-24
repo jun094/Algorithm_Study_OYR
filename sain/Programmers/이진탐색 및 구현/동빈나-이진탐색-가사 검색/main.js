@@ -1,6 +1,92 @@
 console.log("main.js");
 
+class TrieNode {
+  constructor(value = "", count = 0) {
+    this.value = value;
+    this.count = count;
+    this.child = {};
+    this.end = false;
+  }
+}
+
+class Trie {
+  constructor() {
+    this.root = new TrieNode();
+  }
+
+  insert(string) {
+    let currentNode = this.root;
+    currentNode.count++;
+    for (let i = 0; i < string.length; i++) {
+      const currentChar = string[i];
+      if (currentNode.child[currentChar] === undefined) {
+        currentNode.child[currentChar] = new TrieNode(
+          currentNode.value + currentChar,
+          0
+        );
+      }
+      currentNode = currentNode.child[currentChar];
+      currentNode.count++;
+    }
+    currentNode.end = true;
+  }
+
+  search(string) {
+    let currentNode = this.root;
+    for (let i = 0; i < string.length; i++) {
+      const currentChar = string[i];
+      if (currentNode.child[currentChar]) {
+        currentNode = currentNode.child[currentChar];
+      } else {
+        return 0;
+      }
+    }
+    return currentNode.count;
+  }
+}
+
 function solution(words, queries) {
+  let answer = [];
+  const array = new Array(100001).fill(0);
+
+  for (let i = 1; i < 100001; i++) {
+    const header = new Trie();
+    const trailer = new Trie();
+    array[i] = [header, trailer];
+  }
+
+  for (let i = 0; i < words.length; i++) {
+    const ptr = words[i].length;
+    array[ptr][0].insert(words[i]);
+    array[ptr][1].insert(words[i].split("").reverse().join(""));
+  }
+
+  for (let i = 0; i < queries.length; i++) {
+    const qLength = queries[i].length;
+    const str = queries[i].split("?").join("");
+
+    if (str.length === 0 || queries[i][0] !== "?") {
+      answer.push(array[qLength][0].search(str));
+    } else {
+      answer.push(array[qLength][1].search([...str].reverse().join("")));
+    }
+  }
+
+  return answer;
+}
+
+const input = {
+  words: ["frodo", "front", "frost", "frozen", "frame", "kakao"],
+  queries: ["fro??", "????o", "fr???", "fro???", "pro?"],
+};
+
+const { words, queries } = input;
+
+console.log(solution(words, queries));
+
+////////////////////////////////////////////////////////////////////////////
+
+function solution3(words, queries) {
   let answer = [];
   const rwords = words.slice().map((s) => s.split("").reverse().join(""));
 
@@ -69,15 +155,6 @@ function solution(words, queries) {
 
   return answer;
 }
-
-const input = {
-  words: ["frodo", "front", "frost", "frozen", "frame", "kakao"],
-  queries: ["fro??", "????o", "fr???", "fro???", "pro?"],
-};
-
-const { words, queries } = input;
-
-console.log(solution(words, queries));
 
 ////////////////////////////////////////////////////////////////////////////
 

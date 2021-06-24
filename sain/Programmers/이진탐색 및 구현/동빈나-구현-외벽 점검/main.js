@@ -1,45 +1,52 @@
+// https://ko.javascript.info/task/array-negative
+// https://www.youtube.com/watch?v=G-9-_2f5NKQ
 console.log("main.js");
 
+const combinations = function (p, r) {
+  const results = [];
+  if (r === 1) return p.map((d) => [d]);
+  const n = p.length;
+  for (let i = 0; i < n; i++) {
+    const rest = p.slice(i + 1);
+    const comb = combinations(rest, r - 1);
+    const attached = comb.map((c) => [p[i], ...c]);
+    results.push(...attached);
+  }
+  return results;
+};
+
 function solution(n, weak, dist) {
-  const INF = 9876543;
-  let answer = INF;
-
-  const friends = dist.length;
-  const weaks = weak.length;
+  const dLen = dist.length;
   dist.sort((a, b) => b - a);
-  answer = friends;
+  weak = new Proxy(weak, {
+    get(target, prop, receiver) {
+      if (prop < 0) prop = +prop + target.length;
+      return Reflect.get(target, prop, receiver);
+    },
+  });
 
-  function core(cnt, pos, visited) {
-    if (cnt > friends) return;
-    if (cnt >= answer) return;
-    for (let i = 0; i < weaks; i++) {
-      const nextPos = (pos + i) % weaks;
-      const diff =
-        nextPos < pos
-          ? n + weak[nextPos] - weak[pos]
-          : weak[nextPos] - weak[pos];
-
-      if (diff > dist[friends - cnt]) break;
-      visited[nextPos] = true;
-
-      if (!visited.filter((b) => b === false).length) {
-        answer = cnt;
-        return;
+  for (let i = 1; i <= dLen; i++) {
+    for (let item of combinations(
+      weak.map((d, idx) => idx),
+      i
+    )) {
+      const d = [];
+      for (let j = 0; j < i; j++) {
+        d.push((weak[item[(j + 1) % i] - 1] - weak[item[j]] + n) % n);
       }
-
-      for (let i = 0; i < weaks; i++) {
-        if (visited[i]) continue;
-        core(cnt + 1, i, visited);
+      d.sort((a, b) => b - a);
+      let rst = true;
+      for (let j = 0; j < i; j++) {
+        if (dist[j] < d[j]) {
+          rst = false;
+          break;
+        }
       }
+      if (rst) return i;
     }
   }
 
-  for (let p = 0; p < weaks; p++) {
-    const visited = new Array(weaks).fill(false);
-    core(1, p, visited);
-  }
-
-  return answer === INF ? -1 : answer;
+  return -1;
 }
 
 const input1 = {
@@ -60,6 +67,6 @@ const input3 = {
   dist: [1, 1],
 };
 
-const { n, weak, dist } = input3;
+const { n, weak, dist } = input1;
 
 console.log(solution(n, weak, dist));
