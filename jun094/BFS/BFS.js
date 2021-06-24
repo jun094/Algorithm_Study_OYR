@@ -1,33 +1,29 @@
-const solution = (arr) => {
-    let answer = [1];
-    const len = arr.length;
-    let visited = Array(len + 1).fill(false);
-    let queue = [];
+const solution = (graph) => {
+    const n = graph.length;
+    let answer = []; //방문 경로
+    let visited = Array(n + 1).fill(false);
+    let q = [];
 
-    //bfs
-    queue.unshift(1);
+    //좌 삽입
+    q.unshift(1);
+    answer.push(1);
     visited[1] = true;
 
-    while (queue.length !== 0) {
-        let v = queue.pop();
-        console.log('start', v);
+    //bfs
+    while (q.length !== 0) {
+        let v = q.pop(); //우 추출
 
-        for (let i = 0; i < arr[v].length; i++) {
-            if (visited[arr[v][i]] === false) {
-                queue.unshift(arr[v][i]);
-                visited[arr[v][i]] = true;
-                answer.push(arr[v][i]);
+        for (let i = 0, len = graph[v].length; i < len; i++) {
+            let target = graph[v][i];
+
+            if (visited[target] === false) {
+                visited[target] = true; //방문
+                answer.push(target); //방문경로
+                q.unshift(target); //좌삽입
             }
-
-            console.log(answer);
         }
     }
 
     return answer;
 };
-
-let arr = [[], [2, 3, 8], [1, 7], [1, 4, 5], [3, 5], [3, 4], [7], [2, 6, 8], [1, 7]];
-
-solution(arr);
-
-//1 2 3 8 7 4 5 6
+solution([[], [2, 3, 8], [1, 7], [1, 4, 5], [3, 5], [3, 4], [7], [2, 6, 8], [1, 7]]);
