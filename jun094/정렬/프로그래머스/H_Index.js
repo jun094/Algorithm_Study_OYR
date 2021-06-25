@@ -1,19 +1,22 @@
-const solution = (arr) => {
-    let len = arr.length;
-    let idx = 0;
+const solution = (citations) => {
+    let answer = 0;
+    const n = citations.length;
+    let i = 0;
 
-    arr.sort((a, b) => {
-        return b - a;
-    });
-    while (idx < len) {
-        if (idx >= arr[idx]) {
-            //console.log(answer);
-            return idx;
+    citations.sort((a, b) => a - b);
+
+    while (1) {
+        let h = citations[i];
+        let cnt = n - i; //h 이상인 개수
+
+        if (cnt >= h) {
+            answer = h;
+        } else {
+            return answer;
         }
 
-        idx++;
+        i++;
     }
 };
 
-let citations = [3, 0, 6, 1, 5];
-solution(citations);
+solution([3, 0, 6, 1, 5]);

@@ -1,13 +1,13 @@
 const solution = (arr) => {
-    let ans;
+    let answer = '';
+    arr.sort();
 
-    ans = arr
-        .map((number) => number.toString())
-        .sort((a, b) => b + a - (a + b))
-        .join('');
+    for (let i = arr.length - 1; i >= 0; i--) {
+        answer += arr[i];
+    }
 
-    return ans.replace(/(^0+)/, '0');
+    return answer;
 };
 
-let arr = [0, 0, 0, 0];
+let arr = [10, 6, 11, 2];
 solution(arr);
