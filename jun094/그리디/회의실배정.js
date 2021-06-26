@@ -1,27 +1,27 @@
 const solution = (arr) => {
-    const len = arr.length;
     let answer = 1;
-    let end = 0;
+    const n = arr.length;
 
-    //그리디 기준 1 : 끝나는 시간 오름 차순
-    //그리디 기준 2 : 시작 시간 오름 차순
+    //조건 1 : 끝나는 시간 오름차순
+    //조건 2 : 시작하는 시간 오름차순
     arr.sort((a, b) => {
         if (a[1] !== b[1]) return a[1] - b[1];
-        else {
-            return a[0] - b[0];
-        }
+        else return a[0] - b[0];
     });
-    end = arr[0][1];
 
     console.log(arr);
 
-    for (let i = 1; i < len; i++) {
-        if (end <= arr[i][0]) {
+    let prev = arr[0];
+    for (let i = 1; i < n; i++) {
+        let now = arr[i];
+
+        console.log(prev, now);
+
+        if (prev[1] <= now[0]) {
+            prev = now;
             answer++;
-            end = arr[i][1];
         }
     }
-
     return answer;
 };
 
