@@ -1,7 +1,7 @@
 const solution = (arr, m) => {
     let answer = [];
     let n = arr.length;
-    let check = Array(n).fill(0);
+    let visited = Array(n).fill(false);
     let permutation = Array(m).fill(0);
 
     const dfs = (level) => {
@@ -17,18 +17,19 @@ const solution = (arr, m) => {
         }
 
         for (let i = 0; i < n; i++) {
-            if (check[i] === 0) {
-                check[i] = arr[i];
+            if (visited[i] === false) {
+                visited[i] = true;
                 permutation[level] = arr[i];
                 dfs(level + 1);
 
                 //중요 !!!!
-                check[i] = 0;
+                visited[i] = false;
             }
         }
     };
     dfs(0);
 
+    console.log(visited);
     return answer;
 };
 
