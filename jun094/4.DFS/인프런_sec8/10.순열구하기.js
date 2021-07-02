@@ -1,35 +1,30 @@
 const solution = (arr, m) => {
+    const n = arr.length;
+    let tmp = [];
     let answer = [];
-    let n = arr.length;
     let visited = Array(n).fill(false);
-    let permutation = Array(m).fill(0);
 
     const dfs = (level) => {
         if (level === m) {
-            let str = '';
-            for (let i = 0; i < m; i++) {
-                str += permutation[i];
-            }
-
-            answer.push(str);
-
+            answer.push(tmp.slice());
             return;
         }
 
         for (let i = 0; i < n; i++) {
+            //방문하지 않았으면
             if (visited[i] === false) {
+                tmp.push(arr[i]);
                 visited[i] = true;
-                permutation[level] = arr[i];
                 dfs(level + 1);
 
-                //중요 !!!!
+                //back !!
+                tmp.pop();
                 visited[i] = false;
             }
         }
     };
     dfs(0);
 
-    console.log(visited);
     return answer;
 };
 
