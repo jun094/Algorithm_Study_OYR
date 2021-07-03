@@ -1,44 +1,45 @@
 const solution = (arr) => {
-    const n = arr.length;
-    let graph = arr.slice();
     let answer = 0;
-    let q = []; //초기 위치 설정
-
-    //방향 벡터 설정
-    let dx = [-1, -1, -1, 0, 1, 1, 1, 0];
-    let dy = [-1, 0, 1, 1, 1, 0, -1, -1];
-
-    let tmp = [];
+    const n = arr.length;
+    let q = [];
+    let dx = [-1, 0, 1, 0, -1, 1, 1, -1];
+    let dy = [0, 1, 0, -1, 1, 1, -1, -1];
+    let totoal_route = [];
 
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < n; j++) {
-            //섬을 만나면
-            if (graph[i][j] === 1) {
-                graph[i][j] = 0; //방문처리 후,
-                q.unshift([i, j]); // 큐에 삽입
+            if (arr[i][j] === 1) {
+                let route = [];
+                route.push([i, j]);
 
-                answer++;
-                //bfs start !!
+                arr[i][j] = 0; // 방문처리
+                q.unshift([i, j]);
+
                 while (q.length !== 0) {
-                    let v = q.pop();
+                    let [x, y] = q.pop();
 
-                    for (let k = 0; k < 8; k++) {
-                        let nx = v[0] + dx[k];
-                        let ny = v[1] + dy[k];
+                    for (let i = 0; i < 8; i++) {
+                        let nx = x + dx[i];
+                        let ny = y + dy[i];
 
-                        //같은 섬을 만났을 때, 큐 삽입
-                        if (nx > -1 && ny > -1 && nx < n && ny < n) {
-                            if (graph[nx][ny] === 1) {
-                                graph[nx][ny] = 0; //방문 처리후,
-                                q.unshift([nx, ny]); // 큐에 삽입
+                        // padding 처리
+                        if (nx >= 0 && nx < n && ny >= 0 && ny < n) {
+                            //미방분 & 섬인 곳
+                            if (arr[nx][ny] === 1) {
+                                arr[nx][ny] = 0; // 방문처리
+                                route.push([nx, ny]);
+                                q.unshift([nx, ny]);
                             }
                         }
                     }
                 }
+                totoal_route.push(route.slice());
+                answer++;
             }
         }
     }
 
+    console.log(totoal_route);
     return answer;
 };
 
