@@ -4,3 +4,7 @@ String.prototype.replaceAll = function (from, to) {
         else return this.replace(from, to);
     else return this.replace(new RegExp(from.replace(/[\\^$*+?.():=!|{},\[\]]/g, '\\$&'), 'g'), to);
 };
+
+const replaceAll = (str, searchStr, replaceStr) => {
+    return str.split(searchStr).join(replaceStr);
+};

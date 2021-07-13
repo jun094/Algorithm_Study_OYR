@@ -1,12 +1,5 @@
 //https://programmers.co.kr/learn/courses/30/lessons/72410
 
-String.prototype.replaceAll = function (from, to) {
-    if (from instanceof RegExp)
-        if (!from.flags.includes) throw new TypeError('replaceAll must be called with a global RegExp');
-        else return this.replace(from, to);
-    else return this.replace(new RegExp(from.replace(/[\\^$*+?.():=!|{},\[\]]/g, '\\$&'), 'g'), to);
-};
-
 const checkLastFullStop = (str) => {
     let idx = str.length - 1;
 
@@ -18,14 +11,13 @@ const checkLastFullStop = (str) => {
     return ''; //모두 "." 인 경우
 };
 const solution = (new_id) => {
-    const n = new_id.length;
-    let answer = '';
+    let tmp = '';
 
     //1단계
     new_id = new_id.toLowerCase();
 
     //2단계
-    let tmp = '';
+    tmp = '';
     for (let s of new_id) {
         if (('a' <= s && 'z' >= s) || ('0' <= s && '9' >= s) || s === '-' || s === '_' || s === '.') {
             tmp += s;
@@ -34,10 +26,22 @@ const solution = (new_id) => {
     new_id = tmp.slice();
 
     //3단계
-    new_id = new_id.replaceAll('..', '.');
+    tmp = '';
+    for (let i = 0, len = new_id.length; i < len; i++) {
+        if (new_id[i] === '.' && new_id[i - 1] === '.') {
+            continue;
+        } else {
+            tmp += new_id[i];
+        }
+    }
+    new_id = tmp.slice();
 
+    console.log(new_id);
     //4단계
     if (new_id[0] === '.') new_id = new_id.slice(1);
+
+    console.log(new_id);
+
     if (new_id[new_id.length - 1] === '.') new_id = new_id.slice(0, new_id.length - 1);
 
     //5단계
