@@ -1,4 +1,3 @@
-//nCm
 const solution = (n, m, arr) => {
     let answer = 0;
     let combiLists = [];
@@ -21,4 +20,4 @@ const solution = (n, m, arr) => {
     return answer;
 };
 
-solution(5, 3, [2, 4, 5, 8, 12]);
+solution(5, 3, [2, 4, 5, 8, 12]); //nCm , [arr(n)]

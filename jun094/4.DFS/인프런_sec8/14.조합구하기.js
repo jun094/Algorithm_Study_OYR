@@ -1,4 +1,3 @@
-//nCm
 const solution = (n, m) => {
     let combi = []; // 전체 수 조합 리스트
     let tmp = Array.from({ length: m }, () => 0); // 한개의 수 조합
@@ -17,4 +16,4 @@ const solution = (n, m) => {
 
     return combi;
 };
-solution(4, 2);
+solution(4, 2); //nCm
